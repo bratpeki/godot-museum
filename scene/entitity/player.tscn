@@ -75,6 +75,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 [node name="Camera" type="Camera" parent="Head"]
 current = true
 
+[node name="Ray" type="RayCast" parent="Head"]
+enabled = true
+cast_to = Vector3( 0, 0, -5 )
+
 [node name="UI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -83,12 +87,10 @@ anchor_bottom = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 6 )
-text = "Example Text"
 align = 1
 valign = 1
 percent_visible = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "textLoad"
 anims/RESET = SubResource( 5 )
 anims/textLoad = SubResource( 4 )

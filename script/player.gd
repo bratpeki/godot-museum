@@ -21,6 +21,7 @@ onready var camera = $Head/Camera
 
 func _ready():
 
+	$UI/Label.text = playerGlobal.dispText
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -40,6 +41,11 @@ func _process(delta):
 	else:
 		camera.set_as_toplevel(false)
 		camera.global_transform = head.global_transform
+
+	if (Input.is_action_just_pressed("interact")):
+		# $AnimationPlayer.play("textLoad")
+		if ($Head/Ray.get_collider() != null):
+			print ($Head/Ray.get_collider().name)
 
 	if (Input.is_action_just_pressed("exit_game")):
 		get_tree().quit()
