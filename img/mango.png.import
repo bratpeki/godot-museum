@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/mango.png-dd1e1b97592a1f0c82ed19efdcd1f20b.image"
+
+[deps]
+
+source_file="res://img/mango.png"
+dest_files=[ "res://.import/mango.png-dd1e1b97592a1f0c82ed19efdcd1f20b.image" ]
+
+[params]
+
